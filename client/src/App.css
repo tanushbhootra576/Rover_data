@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.abra {
+  /* background-color: #e81616; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+  width: 90vw;
+}
+
+/* .temp1{
+  background-color: pink;
+}
+.temp2{
+  background-color: yellow;
+} */
+
+/* App Container */
+.app-container {
+  text-align: left;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: url(login.jpg) no-repeat center center/cover;
+  justify-content: flex-start;
+}
+
+/* Headings */
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  margin-top: -10px;
+  text-align: center; 
+  font-weight: bolder;
+
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(134deg, #8400bd, #222F3D, #8E43AD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+text-decoration-thickness: black 2px solid;
+  margin-left:32%;
+
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+iframe {
+  border: 2px solid black;
+  width: 40vw;
+  position: relative;
+  right: 2vw;
+  height: 50vh;
+  margin-top:-180px ;
+
+}
+
+/* Containers with Glassmorphism */
+.status-container, .controls-container {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.status-container:hover, .controls-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  outline: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Button Variants */
+.forward { background: linear-gradient(to right, #4CAF50, #00c853); color: white; }
+.backward { background: linear-gradient(to right, #f44336, #d32f2f); color: white; }
+.left { background: linear-gradient(to right, #008CBA, #005f9e); color: white; }
+.right { background: linear-gradient(to right, #FF9800, #ff5722); color: white; }
+
+/* Button Animation */
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .status-container, .controls-container {
+    width: 100%;
+  }
+}
